@@ -1,0 +1,122 @@
+header {
+    position: fixed;
+    width: 100%;
+}
+
+/* NAVBAR */
+#navbar h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    letter-spacing: .5rem;
+    font-size: 1.1rem;
+    width: 24vw;
+    margin-top: 0;
+    padding-top: 1.4rem;
+    padding-bottom: 1.5rem;
+    margin-bottom: 0;
+}
+
+#hamburger-icon {
+    position: absolute;
+    top: 3.8vh;
+    right: 0;
+    cursor:pointer;
+    z-index: 1000;
+}
+
+.bar1, 
+.bar2 {
+  width: 28px;
+  height: 2px;
+  background-color: #4D4444;
+  margin: 6px 0;
+  transition: 0.4s;
+  opacity: .5;
+}
+
+.change.bar1 {
+    -webkit-transform: rotate(-45deg) translate(-3px, 2px);
+    transform: rotate(-45deg) translate(-3px, 2px);
+}
+
+.change.bar2 {
+    -webkit-transform: rotate(45deg) translate(-3.5px, -3px);
+    transform: rotate(45deg) translate(-3px, -3px);
+}  
+
+/* NAVBAR-MENU */
+
+#navbar-menu {
+    width: 100%;
+    background-color: #D6E8E5;
+    height: 100vh;
+    overflow: hidden;
+    text-align: center;
+    transition: all .4s ease-in-out; 
+    position: absolute;
+    top: 0;
+    opacity: 0;
+}
+
+#navbar-menu.active {
+    opacity: .85;
+}
+
+#navbar-menu ul {
+    list-style-type: none;
+    text-decoration: none;
+    padding-left: 0;
+    padding-top: 30vh;
+    margin-top: 0;
+}
+
+#navbar-menu ul li {
+    margin-top: 10vh;
+}
+
+#navbar-menu ul li a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 700;
+
+}
+
+@media (min-width: 481px) {
+  /* NAVBAR-MENU */
+  #navbar-menu ul li a {
+      font-size: 1.5rem;
+  }  
+}
+
+@media (min-width: 768px){
+   /* NAVBAR */
+   #navbar h1 {
+       font-size: 1.5rem;
+   } 
+   #hamburger-icon{
+       top: 4.6vh;
+   }
+}
+
+@media (min-width: 1024px){
+    /* NAVBAR */
+    #navbar h1 {
+        font-size: 2rem;
+    }
+
+    #hamburger-icon {
+        top: 4.1vh;
+    }
+    .bar1,
+    .bar2 {
+        width: 40px;
+        margin-top: .5rem;
+    }
+
+    /* NAVBAR-MENU */
+    #navbar-menu ul li a {
+        font-size: 2.5rem;
+        letter-spacing: .3rem;
+    }
+    
+}

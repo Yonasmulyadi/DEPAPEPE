@@ -1,0 +1,182 @@
+#headline {
+    padding-top: 15vh;
+}
+
+#headline #title {
+    text-align: center;
+    padding-top: 1.5rem;
+}
+
+#headline #title h2 {
+    font-family: 'montserrat', serif;
+    font-weight: 400;
+    font-size: 2.5rem;
+    margin-bottom: 0;
+}
+
+#headline #title p {
+    color: #7DB4B4;
+    font-size: 1.2rem;
+    margin-top: .6rem;
+}
+
+#headline #social-media {
+  width: 35vw;
+  margin: auto;
+}
+
+
+#headline #social-media nav ul {
+    display: flex;
+    list-style-type: none;
+    padding-left: 0;
+}
+
+#headline #social-media ul li {
+    margin-right: 2rem;
+}
+
+#headline #social-media ul li a{
+    color: black;
+}
+
+#headline img {
+    width: 100%;
+    height: 45vh;
+}
+
+#arrow-button {
+    position: relative;
+    margin-top: 11vh;
+    margin-left: 44vw;
+    margin-bottom: 15vh;
+    z-index: -9999;
+}
+
+.arrow1 {
+    height: 1px;
+    width: 34.8px;
+    background-color: black;
+    transform: rotate(90deg);
+}
+
+.arrow2 {
+    height: 1px;
+    background-color: black;
+    width: 10px;
+    transform: rotate(45deg) skew(20deg);
+    position: absolute;
+    top: .81rem;
+    left: .54rem;
+}
+
+.arrow3 {
+    height: 1px;
+    background-color: black;
+    width: 10px;
+    transform: rotate(-45deg) skew(20deg);
+    position: absolute;
+    top: .81rem;
+    left: .99rem;
+}
+
+
+@media (min-width: 481px){
+    #headline img {
+        height: 63vh;
+    }
+
+    #headline #social-media {
+        width: 25%;
+    }
+    #headline #social-media ul li a{
+        font-size: 1.2rem;
+    }
+
+    #arrow-button { 
+        margin-left: 46vw; 
+    }
+
+@media (min-width: 768px){
+    #headline {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
+
+    #headline img {
+        width: 58%;
+        text-align: right;
+    }
+
+    #headline #title {
+        margin-left: 3.5vw;
+        margin-top: 7vh;
+    }
+
+    #headline #title h2 {
+        margin-bottom: .3vh;
+        font-size: 3rem;
+    }
+
+    #headline #title p {
+        margin-top: 0;
+        margin-left: 2rem;
+        margin-bottom: 12vh;
+    }
+
+    #headline #social-media ul li a {
+        font-size: 1.5rem;
+    }
+
+    #arrow-button {
+        margin-left: 2vw;
+        margin-top: 7vh;
+    }
+
+    .arrow1 {
+        width: 35.7px;
+    }
+
+    .arrow3 {
+        top: .85rem;
+    }
+}
+
+@media (min-width: 1024px){
+    #headline img {
+        height: 80vh;
+        width: 63vw;
+    }
+
+    #headline #title {
+        margin-left: 3.5vw;
+        margin-top: 10vh;
+    }
+
+    #headline #title h2 {
+        font-size: 3.5rem;
+    }
+
+    #headline #title p {
+        font-size: 1.8rem;
+    }
+
+    #headline #social-media ul li a {
+        font-size: 1.8rem;
+    }
+
+    #arrow-button{
+        top: 10vh;
+        cursor: pointer;
+    }
+
+    .arrow1 {
+        width: 34.7px;
+        margin-top: 5rem;
+    }
+
+}
+
+}
+
