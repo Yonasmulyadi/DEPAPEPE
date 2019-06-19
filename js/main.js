@@ -26,4 +26,18 @@ document.querySelector('.next').addEventListener('click', () => {
     } 
 })
 
+document.querySelector('.prev').addEventListener('click', () => {
+    if (carouselIndex > 0){
+        carouselIndex -= 1
+        slides[carouselIndex+1].style.display = 'none'; 
+        slides[carouselIndex].style.display = 'block';
+        }
+    else if (carouselIndex === 0){
+            carouselIndex = endIndex
+            slides[0].style.display = 'none'; 
+            slides[carouselIndex].style.display = 'block';
+            }    
+    
+})
+
 
