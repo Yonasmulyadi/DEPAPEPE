@@ -1,3 +1,15 @@
+
+
+#gallery h2 {
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+  letter-spacing: .1rem;
+  font-size: 2rem;
+  color: #7DB4B4;
+  font-weight: 400;
+  margin-bottom: 5rem;
+}
+
 .slideshow-container {
     max-width: 95%;
     position: relative;
@@ -24,7 +36,7 @@
     border-radius: 0 3px 3px 0;
     position: absolute;
     top: 15vh;
-    color: #fff;
+    color: #7DB4B4;
   }
 
 .prev {
@@ -42,9 +54,9 @@
   /* Fading animation */
 .fade {
     -webkit-animation-name: fade;
-    -webkit-animation-duration: 3s;
+    -webkit-animation-duration: 2s;
     animation-name: fade;
-    animation-duration: 3s;
+    animation-duration: 2s;
   }
   
   @-webkit-keyframes fade {
@@ -56,3 +68,67 @@
     from {opacity: .4} 
     to {opacity: 1}
   }
+
+@media (min-width: 481px){
+  .slideshow-container {
+    min-height: 60vh;
+  }
+
+  .mySlides img {
+    min-height: 60vh;
+  }
+
+  .prev, 
+  .next {
+    top: 25vh;
+  }
+}
+
+@media (min-width: 768px){
+  #gallery {
+    display: flex;
+    flex-direction: row-reverse;
+    margin-top: 25vh;
+    width: 92%;
+    margin-right: auto; 
+    
+  }
+
+  #gallery h2 {
+    font-size: 3rem;
+    margin-top: 20vh;
+  }
+
+  .slideshow-container {
+    width: 60%;
+    margin-right: 10vw;
+  }
+
+  @media (min-width: 1024px){
+    #gallery {
+      margin-top: 30vh;
+    }
+    
+    #gallery h2 {
+      font-size: 3.5rem;
+      margin-top: 32vh;
+    }
+    
+    
+    .slideshow-container {
+      min-height: 70vh;
+      margin-right: 15vw;
+      
+    }
+
+    .mySlides img {
+      height: 80vh;
+    }
+
+    .prev, 
+    .next {
+    top: 33vh;
+    font-size: 3rem;
+  }
+  }
+}

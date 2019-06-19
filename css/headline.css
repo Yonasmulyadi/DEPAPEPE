@@ -38,6 +38,7 @@
 
 #headline #social-media ul li a{
     color: black;
+    cursor: pointer;
 }
 
 #headline img {
@@ -50,7 +51,7 @@
     margin-top: 11vh;
     margin-left: 44vw;
     margin-bottom: 15vh;
-    z-index: -9999;
+    cursor: pointer;
 }
 
 .arrow1 {
@@ -127,6 +128,7 @@
 
     #headline #social-media ul li a {
         font-size: 1.5rem;
+
     }
 
     #arrow-button {
