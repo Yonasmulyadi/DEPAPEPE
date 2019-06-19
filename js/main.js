@@ -40,4 +40,14 @@ document.querySelector('.prev').addEventListener('click', () => {
     
 })
 
+//animation onload
+if(screen.width >= 1024){
+    var tlOnLoad = new TimelineLite();
+    tlOnLoad.from('#navbar h1', 2.5, {opacity:0});
+    tlOnLoad.from('#headline img', 3.5, {x:400, opacity: 0},.5)
+    tlOnLoad.from('#headline #title h2', 2.5, {y:-70, opacity: 0}, 1);
+    tlOnLoad.from('#headline #title p', 2.5, {y:-70, opacity: 0}, 1.5);
+    tlOnLoad.from('#headline #social-media', 2.5, {x:-50, opacity: 0}, 2);
+}
+
 
