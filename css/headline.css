@@ -1,5 +1,6 @@
 #headline {
     padding-top: 15vh;
+    overflow: hidden;
 }
 
 #headline #title {
@@ -52,6 +53,12 @@
     margin-left: 44vw;
     margin-bottom: 15vh;
     cursor: pointer;
+    transition: all .3s ease-in-out;
+    height: 4vh;
+}
+
+#arrow-button:hover {
+    transform: translateY(10px);
 }
 
 .arrow1 {
