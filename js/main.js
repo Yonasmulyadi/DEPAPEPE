@@ -56,7 +56,7 @@ document.querySelector('.prev').addEventListener('click', () => {
     //navbar animation onscroll
 
     var navbarScroll = new TimelineLite();
-        navbarScroll.to('#navbar', 2.5, {opacity:0})
+        navbarScroll.to('#navbar h1', 2.5, {opacity:0})
 
     var navbarController = new ScrollMagic.Controller();    
 
@@ -68,6 +68,40 @@ document.querySelector('.prev').addEventListener('click', () => {
             .setTween(navbarScroll)
             .addTo(navbarController); 
 
+    //sections
+
+    var baseSroll_1 = new TimelineLite();
+        baseScroll_1.from("#albums .album-content:nth-of-type(1)", 6, {y:50, opacity: 0});
+    var baseSroll_2 = new TimelineLite();
+        baseScroll_2.from("#albums .album-content:nth-of-type(2)", 6, {y:50, opacity: 0});
+    var baseSroll_3 = new TimelineLite();
+        baseScroll_3.from("#albums .album-content:nth-of-type(3)", 6, {y:50, opacity: 0});
+
+    var baseController = new ScrollMagic.Controller();
+
+    var scene_1 = new ScrollMagic.Scene({
+        triggerElement: "#albums .album-content:nth-of-type(1)",
+        triggerHook: "onEnter",
+        duration: "100%"
+    })
+        .setTween(baseScroll_1)
+        .addTo(baseController);
+
+    var scene_2 = new ScrollMagic.Scene({
+        triggerElement: "#albums .album-content:nth-of-type(2)",
+        triggerHook: "onEnter",
+        duration: "100%"
+    })
+        .setTween(baseScroll_2)
+        .addTo(baseController); 
+    
+    var scene_3 = new ScrollMagic.Scene({
+        triggerElement: "#albums .album-content:nth-of-type(3)",
+        triggerHook: "onEnter",
+        duration: "100%"
+    })
+        .setTween(baseScroll_3)
+        .addTo(baseController);    
 
 if(screen.width >= 1024){
     //animation onload
