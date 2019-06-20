@@ -1,5 +1,6 @@
 #about {
   padding-top: 8vh; 
+  overflow: hidden;
 }
 
 #about h2 {

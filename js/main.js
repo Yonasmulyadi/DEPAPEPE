@@ -68,7 +68,6 @@ document.querySelector('.prev').addEventListener('click', () => {
             .setTween(navbarScroll)
             .addTo(navbarController); 
 
-    
 
     //animation onload
     var tlOnLoad = new TimelineLite();
@@ -78,71 +77,91 @@ document.querySelector('.prev').addEventListener('click', () => {
     tlOnLoad.from('#headline #title p', 2.5, {y:-70, opacity: 0}, 1.5);
     tlOnLoad.from('#headline #social-media', 2.5, {x:-50, opacity: 0}, 2);
 
+    var scroll_default_1 = new TimelineLite();
+    scroll_default_1.from("#about", 6, {y:120, opacity:0});
 
-    //animation onscroll (about-section)
-    var tlScroll_1 = new TimelineLite();
-        tlScroll_1.from("#about div", 6, {x:50, opacity: 0});
+    var scroll_default_2 = new TimelineLite();
+    scroll_default_2.from("#albums", 6, {y:120, opacity:0});
 
-    var controller_1 = new ScrollMagic.Controller();
+    var controller_default = new ScrollMagic.Controller();
 
-    var scene = new ScrollMagic.Scene({
+    var scene_default_1 = new ScrollMagic.Scene({
         triggerElement: "#about h2",
         triggerHook: "onEnter",
         duration: "100%"
-    })
-        .setTween(tlScroll_1)
-        .addTo(controller_1);
+       })
+        .setTween(scroll_default_1)
+        .addTo(controller_default);
 
-    //animation onscroll (albums and gallery section)
-    var tlScroll_2 = new TimelineLite();
-        tlScroll_2.from("#albums img:nth-of-type(1)", 10, {x:-100, opacity: 0});
-        tlScroll_2.from("#albums div:nth-of-type(1) h3", 10, {y:-100, opacity: 0}, 3);
-        tlScroll_2.from("#albums div:nth-of-type(1) p", 10, { opacity: 0}, 6);
-
-    var tlScroll_3 = new TimelineLite();
-        tlScroll_3.from("#albums div:nth-of-type(2)", 20, {x:50, opacity: 0});
-            
-    var tlScroll_4 = new TimelineLite();
-        tlScroll_4.from('#albums div:nth-of-type(3)', 20, {x:-200, opacity: 0});
-
-    var tlScroll_5 = new TimelineLite();
-        tlScroll_5.from('#gallery', 50, {opacity: 0});    
-
-    var controller = new ScrollMagic.Controller();
-
-    var scene_2 = new ScrollMagic.Scene({
-        triggerElement: "#albums div:nth-of-type(1)",
+    var scene_default_2 = new ScrollMagic.Scene({
+        triggerElement: "#albums h2",
         triggerHook: "onEnter",
         duration: "100%"
-    })
-        .setTween(tlScroll_2)
-        .addTo(controller);
-
-    var scene_3 = new ScrollMagic.Scene({
-            triggerElement: "#albums div:nth-of-type(2) h3",
-            triggerHook: "onEnter",
-            duration: "100%"
         })
-            .setTween(tlScroll_3)
-            .addTo(controller);  
-            
-    var scene_4 = new ScrollMagic.Scene({
-            triggerElement: "#albums div:nth-of-type(3) h3",
-            triggerHook: "onEnter",
-            duration: "100%"
-        })
-            .setTween(tlScroll_4)
-            .addTo(controller);          
+        .setTween(scroll_default_2)
+        .addTo(controller_default);    
 
-    var scene_5 = new ScrollMagic.Scene({
-            triggerElement: "#gallery",
-            triggerHook: "onEnter",
-            duration: "100%"
-        })
-            .setTween(tlScroll_5)
-            .addTo(controller);
+if (window.innerWidth >= 768){
+ //animation onscroll (about-section)
+ var tlScroll_1 = new TimelineLite();
+ tlScroll_1.from("#about div", 6, {x:50, opacity: 0});
 
+var controller_1 = new ScrollMagic.Controller();
 
+var scene = new ScrollMagic.Scene({
+ triggerElement: "#about h2",
+ triggerHook: "onEnter",
+ duration: "100%"
+})
+ .setTween(tlScroll_1)
+ .addTo(controller_1);
 
+//animation onscroll (albums and gallery section)
+var tlScroll_2 = new TimelineLite();
+ tlScroll_2.from("#albums img:nth-of-type(1)", 10, {x:-100, opacity: 0});
+ tlScroll_2.from("#albums div:nth-of-type(1) h3", 10, {y:-100, opacity: 0}, 3);
+ tlScroll_2.from("#albums div:nth-of-type(1) p", 10, { opacity: 0}, 6);
 
+var tlScroll_3 = new TimelineLite();
+ tlScroll_3.from("#albums div:nth-of-type(2)", 20, {x:50, opacity: 0});
+     
+var tlScroll_4 = new TimelineLite();
+ tlScroll_4.from('#albums div:nth-of-type(3)', 20, {x:-50, opacity: 0});
 
+var tlScroll_5 = new TimelineLite();
+ tlScroll_5.from('#gallery', 50, {opacity: 0});    
+
+var controller = new ScrollMagic.Controller();
+
+var scene_2 = new ScrollMagic.Scene({
+ triggerElement: "#albums div:nth-of-type(1)",
+ triggerHook: "onEnter",
+ duration: "100%"
+})
+ .setTween(tlScroll_2)
+ .addTo(controller);
+
+var scene_3 = new ScrollMagic.Scene({
+     triggerElement: "#albums div:nth-of-type(2) h3",
+     triggerHook: "onEnter",
+     duration: "100%"
+ })
+     .setTween(tlScroll_3)
+     .addTo(controller);  
+     
+var scene_4 = new ScrollMagic.Scene({
+     triggerElement: "#albums div:nth-of-type(3) h3",
+     triggerHook: "onEnter",
+     duration: "100%"
+ })
+     .setTween(tlScroll_4)
+     .addTo(controller);          
+
+var scene_5 = new ScrollMagic.Scene({
+     triggerElement: "#gallery",
+     triggerHook: "onEnter",
+     duration: "100%"
+ })
+     .setTween(tlScroll_5)
+     .addTo(controller);
+}

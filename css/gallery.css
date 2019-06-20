@@ -1,4 +1,6 @@
-
+#gallery {
+  overflow: hidden;
+}
 #gallery h2 {
   text-align: center;
   font-family: 'Playfair Display', serif;
